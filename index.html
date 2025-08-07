@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리모트지니어스 | 해외 원격 인재 채용 플랫폼 - 인건비 50% 절감</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="리모트지니어스는 검증된 해외 원격 인재를 50% 저렴한 비용으로 채용할 수 있는 B2B 아웃소싱 플랫폼입니다. 개발자, 디자이너, 마케터 등 500+ 글로벌 전문가 풀 보유. 24시간 내 매칭 보장.">
+    <meta name="keywords" content="해외 원격 채용, 아웃소싱, 개발자 채용, 리모트 워크, 원격근무, 글로벌 인재, 스타트업 채용, 인건비 절감, remote genius, 리모트지니어스">
+    <meta name="author" content="리모트지니어스">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://remotegenius.co.kr/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="리모트지니어스 | 해외 원격 인재 채용 플랫폼">
+    <meta property="og:description" content="인건비 50% 절감! 검증된 해외 개발자, 디자이너, 마케터를 24시간 내 매칭. 의무 채용 기간 없이 유연한 인력 운용 가능.">
+    <meta property="og:image" content="https://remotegenius.co.kr/assets/리모트지니어스사무실.png">
+    <meta property="og:url" content="https://remotegenius.co.kr/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="리모트지니어스">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="리모트지니어스 | 해외 원격 인재 채용 플랫폼">
+    <meta name="twitter:description" content="인건비 50% 절감! 검증된 해외 개발자, 디자이너, 마케터를 24시간 내 매칭.">
+    <meta name="twitter:image" content="https://remotegenius.co.kr/assets/리모트지니어스사무실.png">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "리모트지니어스",
+      "alternateName": "Remote Genius",
+      "url": "https://remotegenius.co.kr/",
+      "logo": "https://remotegenius.co.kr/assets/logo.png",
+      "description": "해외 원격 인재 채용 플랫폼",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+82-1670-2905",
+        "contactType": "customer service",
+        "availableLanguage": ["Korean", "English"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/remotegenius",
+        "https://www.facebook.com/remotegenius"
+      ]
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #0F172A;
+            --secondary-blue: #3B82F6;
+            --accent-cyan: #06B6D4;
+            --light-gray: #F8FAFC;
+            --text-gray: #64748B;
+            --success-green: #10B981;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #0F172A 0%, #1E40AF 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-navy);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: slideInLeft 0.8s ease;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-highlight {
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            animation: slideInLeft 0.8s ease 0.2s both;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            animation: slideInLeft 0.8s ease 0.4s both;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            animation: slideInLeft 0.8s ease 0.6s both;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-navy);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-navy);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: slideInRight 0.8s ease;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                left: 100%;
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) { animation-delay: 0.3s; }
+        .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(103, 126, 234, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Wave Divider between Services and About */
+        .wave-divider {
+            width: 100%;
+            height: 100px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wave-divider svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wave-divider-reverse {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+            transform: rotate(180deg);
+        }
+
+        .wave-divider-reverse svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover * {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--primary-navy);
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .service-features {
+            margin-top: 1.5rem;
+            list-style: none;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-features li::before {
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+            animation: float 25s infinite ease-in-out;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .about-card:nth-child(1) { animation-delay: 0.1s; }
+        .about-card:nth-child(2) { animation-delay: 0.2s; }
+        .about-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-blue), var(--accent-cyan));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
+        }
+
+        .about-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .about-card:hover .about-icon {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .about-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-item strong {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-item small {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        .about-benefits {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .about-benefits li {
+            padding: 0.75rem 0;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .about-benefits li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .about-benefits li:hover {
+            color: var(--primary-navy);
+            padding-left: 2.5rem;
+        }
+
+        .about-benefits li:hover::before {
+            left: 0.5rem;
+        }
+
+        .system-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+            transform: translateX(5px);
+        }
+
+        .feature-icon {
+            font-size: 1.25rem;
+        }
+
+        .feature-item span:last-child {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        /* Success Stories */
+        .success-stories {
+            margin-top: 5rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .stories-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .story-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .story-card:nth-child(1) { animation-delay: 0.1s; }
+        .story-card:nth-child(2) { animation-delay: 0.2s; }
+        .story-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .story-quote {
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: Georgia, serif;
+        }
+
+        .story-content {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-top: 2rem;
+            font-style: italic;
+        }
+
+        .story-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .author-info strong {
+            display: block;
+            color: var(--primary-navy);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-info span {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .story-metrics {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .metric {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(6, 182, 212, 0.05));
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        /* Visual Section */
+        .about-visual {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary-navy), #1E40AF);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .visual-image .image-placeholder {
+            background-image: url('./assets/리모트지니어스사무실.png'), linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            background-size: cover, cover;
+            background-position: center, center;
+            background-blend-mode: overlay;
+            height: 350px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-image .image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        .visual-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .global-stat {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .global-stat:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+        }
+
+        .global-stat strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .global-stat small {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary-navy);
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--secondary-blue);
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--light-gray);
+            color: var(--text-gray);
+            padding: 1.5rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-cyan);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--text-gray);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card {
+                margin-bottom: 1rem;
+            }
+
+            .system-features {
+                grid-template-columns: 1fr;
+            }
+
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stories-title {
+                font-size: 2rem;
+            }
+
+            .visual-container {
+                grid-template-columns: 1fr;
+            }
+
+            .visual-stats {
+                margin-top: 2rem;
+            }
+
+            .success-stories {
+                padding: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Counter Animation */
+        @keyframes countUp {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .counter {
+            animation: countUp 2s ease;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .modal-container {
+            background: white;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-overlay.active .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .modal-header h3 {
+            color: white;
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .modal-header p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-navy);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group label .required {
+            color: #ef4444;
+        }
+
+        /* New form styles */
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--secondary-blue);
+        }
+
+        .checkbox-group,
+        .radio-group {
+            display: grid;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item,
+        .radio-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .checkbox-item:hover,
+        .radio-item:hover {
+            background: #e0f2fe;
+            border-color: var(--secondary-blue);
+            transform: translateX(3px);
+        }
+
+        .checkbox-item input,
+        .radio-item input {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label,
+        .radio-item label {
+            cursor: pointer;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .privacy-notice {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        #jobs-error {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .form-submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-submit-btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 3px solid transparent;
+            border-top-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .success-message {
+            display: none;
+            padding: 1rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .success-message.active {
+            display: block;
+            animation: slideInUp 0.5s ease;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-message {
+            display: none;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .error-message.active {
+            display: block;
+            animation: slideInUp 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-container {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .modal-header h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">리모트지니어스</div>
+            <ul class="nav-links">
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+            <a href="#cta" class="nav-cta">무료 상담 신청</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>인건비 <span class="hero-highlight">절반</span>,<br>성과는 <span class="hero-highlight">두 배</span></h1>
+                <p>스타트업의 인건비 부담을 획기적으로 줄이면서 세계 최고의 인재를 채용하세요. 리모트지니어스가 함께합니다.</p>
+                
+                <div class="hero-badges">
+                    <span class="badge">💰 50% 인건비 절감</span>
+                    <span class="badge">🌍 글로벌 인재풀</span>
+                    <span class="badge">⚡ 즉시 업무 투입</span>
+                </div>
+
+                <div class="hero-cta-group">
+                    <a href="#cta" class="btn-primary">지금 바로 시작하기</a>
+                    <a href="#services" class="btn-secondary">서비스 둘러보기</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <img src="assets/Google_AI_Studio_2025-08-07T09_32_51.663Z.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number counter" data-target="500">500+</div>
+                <div class="stat-label">검증된 해외 인재풀</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number counter" data-target="50">50%</div>
+                <div class="stat-label">평균 인건비 절감</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number counter" data-target="95">95%</div>
+                <div class="stat-label">고객 만족도</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number counter" data-target="24">24시간</div>
+                <div class="stat-label">빠른 매칭</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>리모트지니어스 핵심 서비스</h2>
+            <p>스타트업의 모든 인력 니즈를 해결하는 맞춤형 솔루션</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>이커머스 매니저</h3>
+                <p>아마존, 쇼피 등 글로벌 마켓플레이스 전문가가 상품 등록부터 판매 관리까지 모든 프로세스를 담당합니다.</p>
+                <ul class="service-features">
+                    <li>상품 등록 및 최적화</li>
+                    <li>상세페이지 디자인</li>
+                    <li>재고 및 주문 관리</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>소셜미디어 마케터</h3>
+                <p>원어민 수준의 언어 능력과 현지 문화 이해를 바탕으로 효과적인 해외 마케팅 전략을 실행합니다.</p>
+                <ul class="service-features">
+                    <li>인플루언서 마케팅</li>
+                    <li>SNS 채널 운영</li>
+                    <li>콘텐츠 제작 및 관리</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>영업 전문가</h3>
+                <p>해외 시장 개척을 위한 B2B 영업부터 파트너십 구축까지 체계적인 영업 활동을 수행합니다.</p>
+                <ul class="service-features">
+                    <li>리드 제너레이션</li>
+                    <li>제안서 작성 및 발송</li>
+                    <li>고객 관계 관리</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>웹 디자이너</h3>
+                <p>글로벌 트렌드를 이해하고 현지화된 디자인으로 해외 사용자들에게 어필하는 웹사이트를 제작합니다.</p>
+                <ul class="service-features">
+                    <li>UI/UX 디자인</li>
+                    <li>반응형 웹 구현</li>
+                    <li>브랜드 아이덴티티</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>개발자</h3>
+                <p>웹, 모바일, 백엔드 등 다양한 기술 스택을 보유한 개발자들이 프로젝트를 성공적으로 완수합니다.</p>
+                <ul class="service-features">
+                    <li>풀스택 개발</li>
+                    <li>모바일 앱 개발</li>
+                    <li>시스템 아키텍처</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>데이터 분석가</h3>
+                <p>비즈니스 인사이트 도출과 데이터 기반 의사결정을 지원하는 전문 분석가를 제공합니다.</p>
+                <ul class="service-features">
+                    <li>비즈니스 분석</li>
+                    <li>대시보드 구축</li>
+                    <li>리포트 작성</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path d="M0,50 C300,100 900,0 1200,50 L1200,100 L0,100 Z" fill="url(#wave-gradient)"></path>
+            <defs>
+                <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>왜 리모트지니어스인가?</h2>
+            <p>글로벌 시대, 스마트한 인재 채용의 새로운 기준</p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-grid">
+                <!-- 차별점 카드 1 -->
+                <div class="about-card" data-aos="fade-up">
+                    <div class="about-icon">
+                        <span>🌍</span>
+                    </div>
+                    <h3>포스트 팬데믹 시대의 표준</h3>
+                    <p>코로나19 이후 원격근무는 더 이상 선택이 아닌 필수가 되었습니다. 사무실 임대료 절감, 출퇴근 시간 제로, 전 세계 어디서든 최고의 인재와 협업이 가능합니다.</p>
+                    <div class="about-stats">
+                        <span class="stat-item">
+                            <strong>82%</strong>
+                            <small>원격근무 선호 직원</small>
+                        </span>
+                        <span class="stat-item">
+                            <strong>40%</strong>
+                            <small>생산성 향상</small>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 차별점 카드 2 -->
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-icon">
+                        <span>💎</span>
+                    </div>
+                    <h3>글로벌 인재의 가치</h3>
+                    <p>한국의 좁은 인재풀에서 벗어나 전 세계 최고의 전문가들과 함께하세요. 다양한 시간대, 언어, 문화적 배경이 오히려 비즈니스의 강점이 됩니다.</p>
+                    <ul class="about-benefits">
+                        <li>24시간 업무 커버리지 가능</li>
+                        <li>현지 시장 이해도 높은 인재</li>
+                        <li>다양한 관점과 창의적 솔루션</li>
+                    </ul>
+                </div>
+
+                <!-- 차별점 카드 3 -->
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-icon">
+                        <span>⚙️</span>
+                    </div>
+                    <h3>체계적인 관리 시스템</h3>
+                    <p>리모트지니어스는 단순 인력 소개가 아닌, 종합적인 원격 근무 관리 솔루션을 제공합니다. AI 기반 매칭부터 성과 관리까지 모든 과정을 지원합니다.</p>
+                    <div class="system-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🤖</span>
+                            <span>AI 스킬 매칭</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📊</span>
+                            <span>실시간 성과 추적</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔒</span>
+                            <span>보안 시스템</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💬</span>
+                            <span>24/7 지원</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 성공 사례 섹션 -->
+            <div class="success-stories">
+                <h3 class="stories-title">실제 고객들의 성공 스토리</h3>
+                
+                <div class="stories-grid">
+                    <div class="story-card" data-aos="fade-right">
+                        <div class="story-quote">"</div>
+                        <p class="story-content">리모트지니어스를 통해 채용한 해외 개발자 덕분에 개발 속도가 2배 빨라졌고, 인건비는 40% 절감했습니다. 무엇보다 시차를 활용한 24시간 개발이 가능해져 출시 일정을 앞당길 수 있었어요.</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <span>김OO</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>김준영 대표</strong>
+                                <span>AI 스타트업 A사</span>
+                            </div>
+                        </div>
+                        <div class="story-metrics">
+                            <span class="metric">💰 인건비 40% 절감</span>
+                            <span class="metric">🚀 개발 속도 2배</span>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-aos="fade-left" data-aos-delay="100">
+                        <div class="story-quote">"</div>
+                        <p class="story-content">동남아 시장 진출을 준비하면서 현지 마케터가 필요했는데, 리모트지니어스에서 완벽한 인재를 찾았습니다. 현지 문화와 트렌드를 정확히 이해하는 전문가 덕분에 첫 달 매출이 예상치를 300% 초과했어요.</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <span>이OO</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>이서연 CMO</strong>
+                                <span>이커머스 B사</span>
+                            </div>
+                        </div>
+                        <div class="story-metrics">
+                            <span class="metric">📈 매출 300% 증가</span>
+                            <span class="metric">🌏 3개국 진출</span>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-aos="fade-right" data-aos-delay="200">
+                        <div class="story-quote">"</div>
+                        <p class="story-content">처음엔 원격 관리가 걱정됐지만, 리모트지니어스의 체계적인 시스템 덕분에 오히려 사무실 근무보다 효율적입니다. 투명한 업무 추적과 정기 리포트로 안심하고 일할 수 있어요.</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <span>박OO</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>박지훈 CTO</strong>
+                                <span>핀테크 C사</span>
+                            </div>
+                        </div>
+                        <div class="story-metrics">
+                            <span class="metric">⏰ 관리 시간 50% 절약</span>
+                            <span class="metric">😊 팀 만족도 95%</span>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-aos="fade-left" data-aos-delay="300">
+                        <div class="story-quote">"</div>
+                        <p class="story-content">글로벌 뷰티 브랜드 런칭을 준비하면서 영어권 디자이너와 마케터를 채용했습니다. 현지 감각과 문화를 정확히 아는 전문가들 덕분에 브랜드 이미지 훼손 없이 성공적으로 론칭할 수 있었습니다. 한국인 직원 대비 60% 비용으로 더 나은 결과를 얻었어요.</p>
+                        <div class="story-author">
+                            <div class="author-avatar">
+                                <span>최OO</span>
+                            </div>
+                            <div class="author-info">
+                                <strong>최민지 대표</strong>
+                                <span>뷰티 브랜드 D사</span>
+                            </div>
+                        </div>
+                        <div class="story-metrics">
+                            <span class="metric">🎨 브랜드 인지도 250% 상승</span>
+                            <span class="metric">💄 5개국 동시 런칭</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이미지 섹션 -->
+             
+            <div class="about-visual">
+                <div class="visual-container">
+                    <div class="visual-image">
+                        <div class="image-placeholder">
+                        </div>
+                    </div>
+                    <div class="visual-stats">
+                        <div class="global-stat">
+                            <span class="stat-icon">🌐</span>
+                            <div>
+                                <strong>32개국</strong>
+                                <small>글로벌 네트워크</small>
+                            </div>
+                        </div>
+                        <div class="global-stat">
+                            <span class="stat-icon">👥</span>
+                            <div>
+                                <strong>500+</strong>
+                                <small>검증된 전문가</small>
+                            </div>
+                        </div>
+                        <div class="global-stat">
+                            <span class="stat-icon">🏆</span>
+                            <div>
+                                <strong>150+</strong>
+                                <small>성공 프로젝트</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider Reverse -->
+    <div class="wave-divider-reverse">
+        <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path d="M0,50 C300,0 900,100 1200,50 L1200,100 L0,100 Z" fill="url(#wave-gradient-2)"></path>
+            <defs>
+                <linearGradient id="wave-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h2>자주 묻는 질문</h2>
+            <p>리모트지니어스 서비스에 대해 궁금하신 점을 확인하세요</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>의무적으로 유지해야 하는 채용 기간이 있나요?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>아니요, 의무 채용 기간은 없습니다. 프로젝트의 성격과 비즈니스 니즈에 맞게 유연하게 인력을 운용하실 수 있습니다. 단기 프로젝트부터 장기 채용까지 모두 가능합니다.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>원격 근로자의 성과는 어떻게 관리하나요?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>리모트지니어스는 체계적인 성과 관리 시스템을 운영합니다. 근무 시간 트래킹, 업무 진행 상황 리포팅, 정기적인 성과 평가를 통해 투명하게 관리합니다. 또한 화면 모니터링과 활동 추적 기능으로 근무 태만을 방지합니다.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>인력 교체가 필요한 경우 어떻게 하나요?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>파견 인력이 업무 수행에 부적합한 경우, 즉시 교체가 가능합니다. 500명 이상의 검증된 인재풀에서 대체 인력을 신속하게 매칭해 드리며, 업무 공백을 최소화하기 위한 인수인계 프로세스도 지원합니다.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>언어 소통에 문제는 없나요?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>모든 지니어스는 아주 원활한 비즈니스 영어 구사가 가능합니다. 또한 필요시 리모트지니어스가 중간에서 커뮤니케이션을 지원하여 원활한 협업이 가능하도록 돕습니다.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>급여는 어떻게 지급하나요?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>리모트지니어스가 인력을 직접 고용하고 파견하는 형태로, 고객사는 리모트지니어스에 서비스 비용을 지불하시면 됩니다. 복잡한 해외 송금이나 세무 처리 걱정 없이 간편하게 이용하실 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="cta-content">
+            <h2>지금 시작하세요!</h2>
+            <p>인건비 부담을 줄이고 글로벌 인재와 함께 성장하세요.<br>무료 상담을 통해 맞춤형 솔루션을 제안해 드립니다.</p>
+            <a href="#contact" class="cta-button">무료 상담 신청하기 →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-bottom">
+            <p>&copy; 2024 리모트지니어스. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="consultModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>무료 상담 신청</h3>
+                <p>전문가가 24시간 내에 연락드립니다</p>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="consultForm">
+                    <!-- 기본 정보 섹션 -->
+                    <div class="form-section">
+                        <h3 class="section-title">📋 기본 정보</h3>
+                        
+                        <div class="form-group">
+                            <label for="company">회사명 <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" required placeholder="주식회사 ○○○">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">담당자 성함 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="홍길동">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="position">직책</label>
+                                <input type="text" id="position" name="position" placeholder="대표/매니저">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">연락처 <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required placeholder="010-0000-0000">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">이메일 <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="contact@company.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 채용 니즈 섹션 -->
+                    <div class="form-section">
+                        <h3 class="section-title">💼 채용 니즈</h3>
+                        
+                        <div class="form-group">
+                            <label>필요한 직군 <span class="required">*</span> (복수 선택 가능)</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job1" name="jobs" value="이커머스 매니저">
+                                    <label for="job1">🛒 이커머스 매니저 (아마존/쇼피)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job2" name="jobs" value="소셜미디어 마케터">
+                                    <label for="job2">📱 소셜미디어 마케터</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job3" name="jobs" value="영업 전문가">
+                                    <label for="job3">💼 B2B 영업 전문가</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job4" name="jobs" value="UI/UX 디자이너">
+                                    <label for="job4">🎨 UI/UX 디자이너</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job5" name="jobs" value="프론트엔드 개발자">
+                                    <label for="job5">💻 프론트엔드 개발자</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job6" name="jobs" value="백엔드 개발자">
+                                    <label for="job6">⚙️ 백엔드 개발자</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job7" name="jobs" value="데이터 분석가">
+                                    <label for="job7">📊 데이터 분석가</label>
+                                </div>
+                            </div>
+                            <span class="error-message" id="jobs-error">최소 1개 이상 선택해주세요</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>채용 시급성 <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="urgent1" name="urgency" value="즉시" required>
+                                    <label for="urgent1">🔥 즉시 (1주 이내)</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="urgent2" name="urgency" value="긴급">
+                                    <label for="urgent2">⚡ 긴급 (2주 이내)</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="urgent3" name="urgency" value="보통">
+                                    <label for="urgent3">📅 보통 (1개월 이내)</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="urgent4" name="urgency" value="여유">
+                                    <label for="urgent4">⏰ 여유 (1-2개월)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="headcount">채용 인원</label>
+                                <select id="headcount" name="headcount">
+                                    <option value="">선택하세요</option>
+                                    <option value="1명">1명</option>
+                                    <option value="2-3명">2-3명</option>
+                                    <option value="4-5명">4-5명</option>
+                                    <option value="6명 이상">6명 이상</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">월 예산 (1인 기준)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">선택하세요</option>
+                                    <option value="100-200만원">100-200만원</option>
+                                    <option value="200-300만원">200-300만원</option>
+                                    <option value="300-400만원">300-400만원</option>
+                                    <option value="400-500만원">400-500만원</option>
+                                    <option value="500만원 이상">500만원 이상</option>
+                                    <option value="협의 가능">협의 가능</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 상세 정보 섹션 -->
+                    <div class="form-section">
+                        <h3 class="section-title">📝 상세 정보</h3>
+                        
+                        <div class="form-group">
+                            <label for="description">주요 업무 내용 <span class="required">*</span></label>
+                            <textarea id="description" name="description" required 
+                                placeholder="담당하게 될 구체적인 업무를 설명해주세요&#10;예: React로 자사 쇼핑몰 프론트엔드 개발, AWS 인프라 관리 등"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skills">필수 기술/경험</label>
+                            <input type="text" id="skills" name="skills" placeholder="예: React 3년, AWS, 영어 비즈니스 레벨">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="period">예상 계약 기간</label>
+                            <select id="period" name="period">
+                                <option value="">선택하세요</option>
+                                <option value="1-3개월">1-3개월 (단기)</option>
+                                <option value="3-6개월">3-6개월</option>
+                                <option value="6-12개월">6-12개월</option>
+                                <option value="1년 이상">1년 이상</option>
+                                <option value="미정">미정</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 개인정보 동의 -->
+                    <div class="privacy-notice">
+                        <label>
+                            <input type="checkbox" id="privacy" required style="margin-right: 8px;">
+                            <strong>개인정보 수집 및 이용에 동의합니다</strong> <span class="required">*</span>
+                        </label>
+                        <p style="margin-top: 10px; line-height: 1.6; font-size: 12px; color: #64748b;">
+                            수집항목: 회사명, 담당자명, 연락처, 이메일<br>
+                            수집목적: 리모트지니어스 서비스 상담<br>
+                            보유기간: 상담 종료 후 1년
+                        </p>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn" id="submitBtn">
+                        무료 상담 신청하기 →
+                    </button>
+
+                    <div class="success-message" id="successMessage">
+                        🎉 상담 신청이 완료되었습니다! 24시간 이내에 담당자가 연락드리겠습니다.
+                    </div>
+
+                    <div class="error-message" id="errorMessage">
+                        ❌ 오류가 발생했습니다. 다시 시도해주세요.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Observe about cards
+        document.querySelectorAll('.about-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Observe story cards
+        document.querySelectorAll('.story-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(card);
+        });
+
+        // Observe visual section
+        const visualSection = document.querySelector('.about-visual');
+        if (visualSection) {
+            visualSection.style.opacity = '0';
+            visualSection.style.transform = 'translateY(50px)';
+            visualSection.style.transition = 'opacity 1s ease, transform 1s ease';
+            observer.observe(visualSection);
+        }
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : counter.textContent.includes('+') ? '+' : counter.textContent.includes('시간') ? '시간' : '');
+                    }, 30);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('consultModal');
+        const modalClose = document.getElementById('modalClose');
+        const consultForm = document.getElementById('consultForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Google Apps Script URL
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz0UiVaTkdJw0PzwhAlEub-9_O4z_eApbz7whyyBmq1ejaGqpCVZd0yq56yOEYVe9youQ/exec';
+
+        // Open modal when clicking CTA buttons
+        document.querySelectorAll('.nav-cta, .btn-primary, .cta-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.getAttribute('href') === '#cta' || button.getAttribute('href') === '#contact') {
+                    e.preventDefault();
+                    openModal();
+                }
+            });
+        });
+
+        // Open modal function
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal function
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            // Reset messages
+            successMessage.classList.remove('active');
+            errorMessage.classList.remove('active');
+        }
+
+        // Close modal events
+        modalClose.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // ESC key to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Form submission
+        consultForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Reset messages
+            successMessage.classList.remove('active');
+            errorMessage.classList.remove('active');
+
+            // Validate checkbox selection
+            const jobs = document.querySelectorAll('input[name="jobs"]:checked');
+            if (jobs.length === 0) {
+                document.getElementById('jobs-error').style.display = 'block';
+                return;
+            } else {
+                document.getElementById('jobs-error').style.display = 'none';
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            submitBtn.textContent = '전송 중...';
+
+            // Collect selected jobs
+            const selectedJobs = Array.from(jobs).map(job => job.value).join(', ');
+
+            // Get form data
+            const formData = {
+                timestamp: new Date().toLocaleString('ko-KR'),
+                company: document.getElementById('company').value,
+                name: document.getElementById('name').value,
+                position: document.getElementById('position').value || '미입력',
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                jobs: selectedJobs,
+                urgency: document.querySelector('input[name="urgency"]:checked').value,
+                headcount: document.getElementById('headcount').value || '미정',
+                budget: document.getElementById('budget').value || '협의',
+                description: document.getElementById('description').value,
+                skills: document.getElementById('skills').value || '미입력',
+                period: document.getElementById('period').value || '미정'
+            };
+
+            try {
+                // Send to Google Apps Script
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                // Since no-cors mode doesn't return response body, we assume success
+                // Show success message
+                successMessage.classList.add('active');
+                consultForm.reset();
+
+                // Close modal after 3 seconds
+                setTimeout(() => {
+                    closeModal();
+                }, 3000);
+
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.classList.add('active');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+                submitBtn.textContent = '무료 상담 신청하기 →';
+            }
+        });
+
+        // Phone number auto-formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/[^0-9]/g, '');
+            if (value.length > 3 && value.length <= 7) {
+                value = value.slice(0, 3) + '-' + value.slice(3);
+            } else if (value.length > 7) {
+                value = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7, 11);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
