@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>리모트지니어스 | 해외 원격 인재 채용 플랫폼 - 인건비 50% 절감</title>
+    <title>리모트지니어스 | 해외 원격 인재 채용 플랫폼 - 인건비 60% 절감</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="리모트지니어스는 검증된 해외 원격 인재를 50% 저렴한 비용으로 채용할 수 있는 B2B 아웃소싱 플랫폼입니다. 개발자, 디자이너, 마케터 등 500+ 글로벌 전문가 풀 보유. 24시간 내 매칭 보장.">
-    <meta name="keywords" content="해외 원격 채용, 아웃소싱, 개발자 채용, 리모트 워크, 원격근무, 글로벌 인재, 스타트업 채용, 인건비 절감, remote genius, 리모트지니어스">
+    <meta name="description" content="리모트지니어스는 검증된 해외 원격 인재를 국내대비 60% 저렴한 인건비로 채용할 수 있는 B2B 아웃소싱 플랫폼입니다. 개발자, 디자이너, 마케터 등 500+ 글로벌 전문가 풀 보유. 24시간 내 매칭 보장.">
+    <meta name="keywords" content="해외 원격 채용, 아웃소싱, 개발자 채용, 리모트 워크, 외국인 채용, 원격근무, 글로벌 인재, 스타트업 채용, 인건비 절감, remote genius, 리모트지니어스">
     <meta name="author" content="리모트지니어스">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://remotegenius.co.kr/">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="리모트지니어스 | 해외 원격 인재 채용 플랫폼">
-    <meta property="og:description" content="인건비 50% 절감! 검증된 해외 개발자, 디자이너, 마케터를 24시간 내 매칭. 의무 채용 기간 없이 유연한 인력 운용 가능.">
+    <meta property="og:description" content="인건비 60% 절감! 검증된 해외 개발자, 디자이너, 마케터를 24시간 내 매칭. 의무 채용 기간 없이 유연한 인력 운용 가능.">
     <meta property="og:image" content="https://remotegenius.co.kr/assets/리모트지니어스사무실.png">
     <meta property="og:url" content="https://remotegenius.co.kr/">
     <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="리모트지니어스 | 해외 원격 인재 채용 플랫폼">
-    <meta name="twitter:description" content="인건비 50% 절감! 검증된 해외 개발자, 디자이너, 마케터를 24시간 내 매칭.">
+    <meta name="twitter:description" content="인건비 60% 절감! 검증된 해외 개발자, 디자이너, 마케터를 24시간 내 매칭.">
     <meta name="twitter:image" content="https://remotegenius.co.kr/assets/리모트지니어스사무실.png">
     
     <!-- Structured Data (JSON-LD) -->
@@ -1203,7 +1203,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
             z-index: 9999;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -1224,7 +1225,7 @@
             margin: 20px auto;
             background: white;
             border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
             overflow: hidden;
             animation: slideUp 0.6s ease;
         }
@@ -1431,6 +1432,8 @@
         .submit-section {
             margin-top: 40px;
             text-align: center;
+            display: flex;
+            justify-content: center;
         }
 
         .form-submit-btn {
@@ -2042,6 +2045,10 @@
                                     <input type="checkbox" id="job7" name="jobs" value="데이터 분석가">
                                     <label for="job7">📊 데이터 분석가</label>
                                 </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="job8" name="jobs" value="고객지원 전문가">
+                                    <label for="job8">📞 고객지원 전문가</label>
+                                </div>
                             </div>
                             <span class="error-message" id="jobs-error">최소 1개 이상 선택해주세요</span>
                         </div>
@@ -2084,11 +2091,10 @@
                                 <label for="budget">월 예산 (1인 기준)</label>
                                 <select id="budget" name="budget">
                                     <option value="">선택하세요</option>
+                                    <option value="100만원 이하">100만원 이하</option>
                                     <option value="100-200만원">100-200만원</option>
                                     <option value="200-300만원">200-300만원</option>
-                                    <option value="300-400만원">300-400만원</option>
-                                    <option value="400-500만원">400-500만원</option>
-                                    <option value="500만원 이상">500만원 이상</option>
+                                    <option value="300만원 이상">300만원 이상</option>
                                     <option value="협의 가능">협의 가능</option>
                                 </select>
                             </div>
@@ -2129,16 +2135,18 @@
                             <input type="checkbox" id="privacy" required style="margin-right: 8px;">
                             <strong>개인정보 수집 및 이용에 동의합니다</strong> <span class="required">*</span>
                         </label>
-                        <p style="margin-top: 10px; line-height: 1.6; font-size: 12px; color: #64748b;">
+                        <p style="margin-top: 10px; margin-left: 21px; line-height: 1.6; font-size: 12px; color: #64748b;">
                             수집항목: 회사명, 담당자명, 연락처, 이메일<br>
                             수집목적: 리모트지니어스 서비스 상담<br>
                             보유기간: 상담 종료 후 1년
                         </p>
                     </div>
 
-                    <button type="submit" class="form-submit-btn" id="submitBtn">
-                        무료 상담 신청하기 →
-                    </button>
+                    <div class="submit-section">
+                        <button type="submit" class="form-submit-btn" id="submitBtn">
+                            무료 상담 신청하기 →
+                        </button>
+                    </div>
 
                     <div class="success-message" id="successMessage">
                         🎉 상담 신청이 완료되었습니다! 24시간 이내에 담당자가 연락드리겠습니다.
