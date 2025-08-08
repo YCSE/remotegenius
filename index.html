@@ -44,6 +44,14 @@
         "contactType": "customer service",
         "availableLanguage": ["Korean", "English"]
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "21:00"
+        }
+      ],
       "sameAs": [
         "https://www.linkedin.com/company/remotegenius",
         "https://www.facebook.com/remotegenius"
@@ -1310,8 +1318,13 @@
                 padding: 0;
             }
 
+            /* Hide hero badges on mobile */
+            .hero-badges {
+                display: none;
+            }
+
             .hero-text h1 {
-                font-size: 28px;
+                font-size: 38px;
                 line-height: 1.3;
                 margin-bottom: 1rem;
             }
@@ -2099,6 +2112,41 @@
                 font-size: 1.5rem;
             }
         }
+
+        /* Mobile fixed call button */
+        .call-fixed-mobile {
+            position: fixed;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            height: 56px;
+            padding: 0 24px;
+            border-radius: 9999px;
+            z-index: 1001;
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 800;
+            text-align: center;
+            line-height: 56px;
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.35);
+            display: none;
+            text-decoration: none;
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .call-fixed-mobile:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(59, 130, 246, 0.45);
+        }
+
+        /* Show only on mobile */
+        @media (max-width: 768px) {
+            .call-fixed-mobile {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2151,7 +2199,17 @@
             
             <div class="hero-image">
                 <div class="image-placeholder">
-                    <img src="assets/Google_AI_Studio_2025-08-07T09_32_51.663Z.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    <picture>
+                        <source srcset="assets/hero-image.avif" type="image/avif">
+                        <source srcset="assets/hero-image.webp" type="image/webp">
+                        <img src="assets/Google_AI_Studio_2025-08-07T09_32_51.663Z.png" 
+                             alt="Remote Genius 글로벌 인재 서비스" 
+                             width="600" 
+                             height="400" 
+                             fetchpriority="high" 
+                             decoding="async" 
+                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -3015,5 +3073,8 @@
             e.target.value = value;
         });
     </script>
+    
+    <!-- Mobile fixed call button -->
+    <a href="tel:1670-2905" class="call-fixed-mobile" aria-label="1670-2905로 전화하기 (평일 08:00–21:00)">전화 상담 1670-2905</a>
 </body>
 </html>
