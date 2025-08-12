@@ -1,0 +1,17 @@
+# Test files
+test-form.html
+test-webhook.sh
+
+# Google Apps Script (contains sensitive webhook URL)
+google-apps-script.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
