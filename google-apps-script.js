@@ -1,4 +1,4 @@
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 function doPost(e) {
   try {
@@ -162,6 +162,33 @@ function doGet(e) {
       'timestamp': new Date().toISOString()
     }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+// 간단한 Slack 테스트
+function simpleSlackTest() {
+  try {
+    const testMessage = {
+      "text": "🧪 Google Apps Script에서 직접 테스트"
+    };
+    
+    const response = UrlFetchApp.fetch(SLACK_WEBHOOK_URL, {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(testMessage),
+      muteHttpExceptions: true
+    });
+    
+    console.log('Response code:', response.getResponseCode());
+    console.log('Response text:', response.getContentText());
+    
+    if (response.getResponseCode() === 200) {
+      console.log('✅ Slack 전송 성공!');
+    } else {
+      console.log('❌ Slack 전송 실패');
+    }
+  } catch (error) {
+    console.error('Error:', error.toString());
+  }
 }
 
 // 테스트 함수
