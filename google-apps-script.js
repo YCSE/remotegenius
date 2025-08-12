@@ -1,7 +1,18 @@
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 function doPost(e) {
   try {
+    // 요청 확인
+    if (!e || !e.postData || !e.postData.contents) {
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          'result': 'error',
+          'message': '잘못된 요청입니다.',
+          'debug': 'No postData received'
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+    
     // 폼 데이터 파싱
     const data = JSON.parse(e.postData.contents);
 
@@ -117,8 +128,42 @@ function doPost(e) {
 }
 
 // GET 요청 처리 (테스트용)
-function doGet() {
+function doGet(e) {
   return ContentService
-    .createTextOutput('Remote Genius Form Handler is running!')
-    .setMimeType(ContentService.MimeType.TEXT);
+    .createTextOutput(JSON.stringify({
+      'status': 'running',
+      'message': 'Remote Genius Form Handler is running!',
+      'deployment': 'Web app is properly deployed',
+      'timestamp': new Date().toISOString()
+    }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// 테스트 함수
+function testSlackWebhook() {
+  const testData = {
+    timestamp: new Date().toLocaleString('ko-KR', {timeZone: 'Asia/Seoul'}),
+    company: '테스트 회사',
+    name: '테스트 담당자',
+    position: '대표',
+    phone: '010-1234-5678',
+    email: 'test@example.com',
+    jobs: '웹 개발자, 디자이너',
+    urgency: '즉시',
+    headcount: '2명',
+    budget: '300만원',
+    period: '6개월',
+    description: '테스트 프로젝트 설명',
+    skills: 'React, Node.js'
+  };
+  
+  // doPost 함수 테스트
+  const fakeEvent = {
+    postData: {
+      contents: JSON.stringify(testData)
+    }
+  };
+  
+  const result = doPost(fakeEvent);
+  console.log(result.getContent());
 }
