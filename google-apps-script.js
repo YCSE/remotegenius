@@ -1,4 +1,4 @@
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 function doPost(e) {
   try {
@@ -99,19 +99,44 @@ function doPost(e) {
     };
 
     // Slack으로 전송
-    UrlFetchApp.fetch(SLACK_WEBHOOK_URL, {
-      method: 'post',
-      contentType: 'application/json',
-      payload: JSON.stringify(slackMessage)
-    });
-
-    // 성공 응답
-    return ContentService
-      .createTextOutput(JSON.stringify({
-        'result': 'success',
-        'message': '상담 신청이 완료되었습니다!'
-      }))
-      .setMimeType(ContentService.MimeType.JSON);
+    try {
+      const slackResponse = UrlFetchApp.fetch(SLACK_WEBHOOK_URL, {
+        method: 'post',
+        contentType: 'application/json',
+        payload: JSON.stringify(slackMessage),
+        muteHttpExceptions: true
+      });
+      
+      const responseCode = slackResponse.getResponseCode();
+      const responseText = slackResponse.getContentText();
+      
+      if (responseCode !== 200) {
+        console.error('Slack error:', responseCode, responseText);
+        throw new Error(`Slack returned ${responseCode}: ${responseText}`);
+      }
+      
+      // 성공 응답
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          'result': 'success',
+          'message': '상담 신청이 완료되었습니다!',
+          'slack_response': responseText
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+        
+    } catch (slackError) {
+      console.error('Slack send failed:', slackError);
+      
+      // Slack 전송 실패해도 일단 성공으로 처리 (데이터는 받았으므로)
+      return ContentService
+        .createTextOutput(JSON.stringify({
+          'result': 'partial_success',
+          'message': '상담 신청은 접수되었으나 Slack 전송에 실패했습니다.',
+          'slack_error': slackError.toString(),
+          'received_data': data
+        }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
 
   } catch(error) {
     // 에러 처리
