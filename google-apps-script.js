@@ -1,4 +1,4 @@
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 function doPost(e) {
   try {
@@ -100,7 +100,10 @@ function doPost(e) {
 
     // Slack으로 전송
     try {
-      const slackResponse = UrlFetchApp.fetch(SLACK_WEBHOOK_URL, {
+      // URL 직접 사용 (변수 참조 문제 해결)
+      const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+      
+      const slackResponse = UrlFetchApp.fetch(WEBHOOK_URL, {
         method: 'post',
         contentType: 'application/json',
         payload: JSON.stringify(slackMessage),
@@ -168,7 +171,7 @@ function doGet(e) {
 function simpleSlackTest() {
   try {
     // URL 직접 하드코딩
-    const WEBHOOK = 'https://hooks.slack.com/services/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';
+    const WEBHOOK = 'https://hooks.slack.com/services/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';
     
     console.log('Using Webhook URL:', WEBHOOK);
     console.log('URL Length:', WEBHOOK.length);
@@ -197,6 +200,56 @@ function simpleSlackTest() {
   } catch (error) {
     console.error('Error:', error.toString());
     return error.toString();
+  }
+}
+
+// 완전한 테스트 함수
+function testFullMessage() {
+  const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+  
+  const slackMessage = {
+    "text": "🎉 새로운 상담 신청이 접수되었습니다!",
+    "blocks": [
+      {
+        "type": "header",
+        "text": {
+          "type": "plain_text",
+          "text": "🚀 Remote Genius 상담 신청"
+        }
+      },
+      {
+        "type": "section",
+        "fields": [
+          {
+            "type": "mrkdwn",
+            "text": "*회사명:*\n테스트 회사"
+          },
+          {
+            "type": "mrkdwn",
+            "text": "*담당자:*\n홍길동"
+          }
+        ]
+      }
+    ]
+  };
+  
+  try {
+    const response = UrlFetchApp.fetch(WEBHOOK_URL, {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(slackMessage),
+      muteHttpExceptions: true
+    });
+    
+    console.log('Response:', response.getResponseCode(), response.getContentText());
+    
+    if (response.getResponseCode() === 200) {
+      console.log('✅ 메시지 전송 성공!');
+    } else {
+      console.log('❌ 메시지 전송 실패');
+    }
+  } catch (error) {
+    console.error('Error:', error.toString());
   }
 }
 
