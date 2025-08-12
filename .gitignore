@@ -1,9 +1,14 @@
 # Test files
 test-form.html
 test-webhook.sh
+test-slack-app.html
 
 # Google Apps Script (contains sensitive webhook URL)
 google-apps-script.js
+
+# Slack configuration (contains sensitive tokens)
+slack-app-script.js
+SLACK_SETUP.md
 
 # OS files
 .DS_Store
