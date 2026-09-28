@@ -27,32 +27,32 @@ Remote Genius (리모트지니어스) provides:
 
 The entire website is contained in a single `index.html` file with:
 - Inline CSS in `<style>` tags
-- Inline JavaScript for interactions
+- Inline JavaScript for interactions (GSAP 3.15 + ScrollTrigger and Lenis 1.3 from jsDelivr, pinned versions, `defer`)
 - Korean language content (UTF-8 encoding)
-- Image placeholders with descriptive prompts (not actual images)
+- Hero photos `assets/hero-seoul-*` / `assets/hero-manila-*`, AI media samples `assets/ai-*.webp`, share image `assets/og-image.jpg`
+- Font: Wanted Sans Variable (jsDelivr) only
 
 ### Design System
 
-Colors:
-- Primary Navy: `#0F172A`
-- Secondary Blue: `#3B82F6`
-- Accent Cyan: `#06B6D4`
-- Gradients for visual interest
+Grid (the rule that matters most): one 12-column grid for every row. `.container` = max 1280px content, margin `clamp(20px, 5vw, 80px)`, gap `clamp(16px, 1.8vw, 24px)`. Header, hero, every section and the footer use it, so every text edge lines up with the logo. Text blocks sit in columns 1–5/6; panels and visuals start on column 7 (the same line where the header nav starts) and end on column 12. Photos, marquees and the stories slider may bleed, text never does. Check with `getBoundingClientRect().left` at 1728 / 1440 / 1280 / 1024 / 390 after layout changes.
 
-Key Sections:
-1. Navigation with anchor links (#services, #about, #faq, #contact)
-2. Hero section with value proposition
-3. Statistics section
-4. Services grid (6 services)
-5. About section ("왜 리모트지니어스인가?")
-6. Customer success stories
-7. FAQ accordion
-8. CTA section
-9. Footer with contact info
+Color roles (CSS variables in `:root`):
+- Ultramarine `#2341E0` — brand and action only: hero, final CTA, buttons, links, active states
+- Midnight `#0F1838` — the one dark feature section (AI media) and the footer
+- White — base of every other section; Cloud `#F4F6FB` — panels only, never a whole section
+- Ink `#0D1433` text, Slate `#4A5270` secondary text, Line `#E3E7F0`
+- Live `#2FD39A` — only "통화 중 / 근무 중" dots
 
-### Deployment
-
-Static website intended for GitHub Pages deployment. No build process required - direct HTML file.
+Key Sections (anchor ids used by nav and sitemap.xml: #services, #about, #faq, #contact):
+1. Header (transparent on hero, solid after it, hides on scroll down, scroll progress, active-section underline)
+2. Hero: copy on cols 1–6, video-call scene on cols 7–12 (Seoul founder × Manila genius, live clocks, call timer, chat with EN/KO lines), stats row
+3. Ticker: two marquees of practical tasks and tools
+4. Savings calculator (average 50% savings)
+5. Services (#services): 8-role tab explorer, each role with 6 practical tasks, tools and a "상담 신청" button that pre-checks its job in the form
+6. AI media (#ai-media): before/after slider, short-form reel, ComfyUI-style workflow run
+7. Process (#process): 4 steps with a scroll-linked line
+8. About (#about) "왜 리모트지니어스인가?" + live work-report mock
+9. Stories slider, 10. FAQ (#faq), 11. CTA (#cta), 12. Footer (#contact)
 
 ### Content Guidelines
 
@@ -61,16 +61,22 @@ Static website intended for GitHub Pages deployment. No build process required -
 - Use "급여" (salary) not "가격" (price) when discussing compensation
 - Avoid treating people as commodities in language
 - Maintain professional, trustworthy tone
+- Practical, specific role content (e.g. 아마존 셀러센트럴 리스팅, 쇼피 캠페인·바우처, Higgsfield 숏폼, ComfyUI 워크플로우). Illustrative UI (call scene, report, AI samples) is labelled 예시; don't claim a sample was made with a specific tool unless it was.
 
 ### Animation and Interactions
 
-- FAQ accordion functionality
-- Smooth scroll for anchor links
-- Counter animations for statistics
-- Scroll-triggered animations (fadeInUp, slideIn)
-- Hover effects on cards and buttons
-- Navbar transparency changes on scroll
+- `html.js` / `html.motion` / `html.ready` classes are set by the inline head script; the hero is pre-hidden only under `.motion:not(.ready)` and a 3.5s failsafe removes `motion` if the libraries never load
+- Every GSAP/Lenis use is guarded; without them (or with `prefers-reduced-motion`) all content renders statically
+- Anything that moves on its own has a pause control (call scene, ticker, reel)
+- Consultation form is a native `<dialog id="consultModal">`, opened by any `[data-consult]` link (`data-job="job1"` pre-checks a job); Lenis stops while it is open; scroll lock is CSS (`html:has(.consult[open])`)
+- Form payload (keys, `SCRIPT_URL`, `mode: 'no-cors'`) feeds Google Apps Script → Slack; keep keys and field ids/values unchanged. Failures are silent under no-cors, so never "test" by submitting to the live endpoint.
+- Testing tip: a background Chrome window reports `visibilityState: hidden`, which freezes rAF, GSAP, ScrollTrigger and scroll events. Bring the window to the front, or force with `gsap.ticker.tick()` + `ScrollTrigger.update()`.
 
 ### Design Notes
 
-- 지금 이 레이아웃 디자인 너무 마음에 든다. 훼손하지 않도록 주의
+- 2026-09 리뉴얼. 원본(보라 그라데이션) 디자인은 커밋 c8b7d69의 index.html에 있음.
+- 정렬은 헤더 기준 12칸 그리드 하나로만 맞춘다. 색은 역할표 밖으로 쓰지 않는다.
+
+### Deployment
+
+Static website intended for GitHub Pages deployment. No build process required - direct HTML file.
