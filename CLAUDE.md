@@ -81,6 +81,7 @@ Key Sections (anchor ids used by nav: #services, #about, #faq, #contact):
 ### SEO
 
 - Head meta (title, description, OG/Twitter) and JSON-LD quote the same numbers as the page (평균 50% 절감). Don't reintroduce a number the page doesn't show.
+- Meta description and og/twitter descriptions stay within 80 characters (Naver Search Advisor flags longer ones).
 - JSON-LD `@graph` in `<head>`: Organization, WebSite, WebPage, Service (8 roles), FAQPage. The role descriptions and FAQ answers are copied verbatim from the page. When the visible FAQ or a role description changes, update the JSON-LD and `llms.txt` to match.
 - `sameAs` is left out on purpose: linkedin.com/company/remotegenius is another company (RemoteGenius LLC, IoT), and facebook.com/remotegenius (English, "outsourced team members") is unverified. Add only profiles the company actually owns.
 - Stat counters (`[data-count]`) keep the final value in the markup and only drop to 0 inside `countUp` / at the reveal trigger. Never reset them to 0 on load: renderers that don't run GSAP (crawlers) would index "평균 인건비 절감 0%".
