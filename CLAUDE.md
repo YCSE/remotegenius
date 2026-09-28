@@ -67,6 +67,7 @@ Key Sections (anchor ids used by nav: #services, #about, #faq, #contact):
 
 - `html.js` / `html.motion` / `html.ready` classes are set by the inline head script; the hero is pre-hidden only under `.motion:not(.ready)` and a 3.5s failsafe removes `motion` if the libraries never load
 - Every GSAP/Lenis use is guarded; without them (or with `prefers-reduced-motion`) all content renders statically
+- Search/AI crawlers (named UA list in the inline head script, which adds `html.crawler`) get that same static render. Googlebot never scrolls, so scroll reveals left 14 blocks `visibility: hidden` and counters at 0% in its rendered HTML (GSC live test, 2026-09-28). Keep the UA list in that one place; don't add Lighthouse to it.
 - Anything that moves on its own has a pause control (call scene, ticker, reel)
 - Consultation form is a native `<dialog id="consultModal">`, opened by any `[data-consult]` link (`data-job="job1"` pre-checks a job); Lenis stops while it is open; scroll lock is CSS (`html:has(.consult[open])`)
 - Form payload (keys, `SCRIPT_URL`, `mode: 'no-cors'`) feeds Google Apps Script → Slack; keep keys and field ids/values unchanged. Failures are silent under no-cors, so never "test" by submitting to the live endpoint.

@@ -261,7 +261,12 @@
         (function (d) {
             var r = d.documentElement;
             r.classList.add('js');
-            if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            // Search and AI crawlers get the static (reduced-motion) render: same content, nothing left hidden
+            // waiting for a scroll that never comes. Named bots only; Lighthouse keeps measuring what people get.
+            if (/Googlebot|Google-InspectionTool|bingbot|Yeti|Daum|Applebot|DuckDuckBot|GPTBot|OAI-SearchBot|ClaudeBot|PerplexityBot/i.test(navigator.userAgent)) {
+                r.classList.add('crawler');
+            }
+            if (!r.classList.contains('crawler') && (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
                 r.classList.add('motion');
                 // If the animation libraries never arrive, show everything anyway
                 setTimeout(function () { if (!r.classList.contains('ready')) r.classList.remove('motion'); }, 3500);
@@ -3862,7 +3867,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const root = document.documentElement;
-            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const reduceMotion = root.classList.contains('crawler') || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             const hasGSAP = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
             const motionOK = hasGSAP && !reduceMotion;
             const $ = (sel, ctx = document) => ctx.querySelector(sel);
