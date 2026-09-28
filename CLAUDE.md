@@ -43,7 +43,7 @@ Color roles (CSS variables in `:root`):
 - Ink `#0D1433` text, Slate `#4A5270` secondary text, Line `#E3E7F0`
 - Live `#2FD39A` — only "통화 중 / 근무 중" dots
 
-Key Sections (anchor ids used by nav and sitemap.xml: #services, #about, #faq, #contact):
+Key Sections (anchor ids used by nav: #services, #about, #faq, #contact):
 1. Header (transparent on hero, solid after it, hides on scroll down, scroll progress, active-section underline)
 2. Hero: copy on cols 1–6, video-call scene on cols 7–12 (Seoul founder × Manila genius, live clocks, call timer, chat with EN/KO lines), stats row
 3. Ticker: two marquees of practical tasks and tools
@@ -77,6 +77,15 @@ Key Sections (anchor ids used by nav and sitemap.xml: #services, #about, #faq, #
 - 2026-09 리뉴얼. 원본(보라 그라데이션) 디자인은 커밋 c8b7d69의 index.html에 있음.
 - 정렬은 헤더 기준 12칸 그리드 하나로만 맞춘다. 색은 역할표 밖으로 쓰지 않는다.
 
+### SEO
+
+- Head meta (title, description, OG/Twitter) and JSON-LD quote the same numbers as the page (평균 50% 절감). Don't reintroduce a number the page doesn't show.
+- JSON-LD `@graph` in `<head>`: Organization, WebSite, WebPage, Service (8 roles), FAQPage. The role descriptions and FAQ answers are copied verbatim from the page. When the visible FAQ or a role description changes, update the JSON-LD and `llms.txt` to match.
+- `sameAs` is left out on purpose: linkedin.com/company/remotegenius is another company (RemoteGenius LLC, IoT), and facebook.com/remotegenius (English, "outsourced team members") is unverified. Add only profiles the company actually owns.
+- Stat counters (`[data-count]`) keep the final value in the markup and only drop to 0 inside `countUp` / at the reveal trigger. Never reset them to 0 on load: renderers that don't run GSAP (crawlers) would index "평균 인건비 절감 0%".
+- `sitemap.xml` lists the one URL (no `#fragments`). When the page content changes, bump its `lastmod` and the JSON-LD `WebPage.dateModified` together.
+- Icons: `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `assets/logo.png` (Organization logo) are all the same mark as the header logo.
+
 ### Deployment
 
-Static website intended for GitHub Pages deployment. No build process required - direct HTML file.
+Static website intended for GitHub Pages deployment. No build process required - direct HTML file. The workflow copies the repo to `_site` without dotfiles and `*.md`, so CLAUDE.md and COMPONENTS.md are not published.
